@@ -2,6 +2,7 @@
    font-family: Moon;
    src: url(./assets/fonts/MoonLight.otf);
 }
+
 @font-face {
    font-family: MoonBold;
    src: url(./assets/fonts/MoonBold.otf);
@@ -16,7 +17,7 @@
 }
 
 .main {
-   padding-top: 20%;
+   padding-top: 15%;
    text-align: center;
 }
 
@@ -38,18 +39,73 @@
    padding-top: 20%;
    border-radius: 5px;
    text-align: center;
-   transition: box-shadow .2s ease-in;
-   box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   transition: opacity .2s ease-in, box-shadow .2s ease-in;
+   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
    margin: 10px;
    opacity: .9;
 }
 
-.content:hover {
-   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+.render img {
+   width: 100%;
 }
 
+.lightbox {
+   display: block;
+   position: fixed;
+   left: 0%;
+   top: 0%;
+   height: 80%;
+   text-align: center;
+   margin: auto;
+   z-index: 10;
+}
+
+.lightbox img {
+   width: 75%;
+}
+
+.zoom {
+   animation-name: zoom;
+   animation-duration: 0.5s;
+}
+
+.zoom-out {
+   animation-name: zoom-out;
+   animation-duration: 0.5s;
+}
+
+.hidden {
+   display: none;
+}
+
+.content:hover {
+   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+   opacity: 1;
+}
+
+@keyframes zoom {
+   from {
+      transform: scale(0)
+   }
+   to {
+      transform: scale(1)
+   }
+}
+
+@keyframes zoom-out {
+   from {
+      transform: scale(1)
+   }
+   to {
+      transform: scale(0)
+   }
+}
 
 /* Navbar CSS */
+
+.navbar {
+   z-index: 10 !important;
+}
 
 .navbar-trans {
    background-color: transparent !important;
@@ -112,7 +168,7 @@
 }
 
 .navbar-doublerow .navbar-down ul>li>a:hover {
-   text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
    border-bottom: 1px solid #fff;
    color: #fff;
 }
