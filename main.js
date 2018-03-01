@@ -23,7 +23,7 @@ Clove.addListeners = function() {
       $('.lightbox').removeClass('zoom');
       setTimeout(function(){
          $('.lightbox').toggleClass('hidden');
-      }, 500);
+      }, 400);
    });
    // click listener for nav bar items
    Clove.addPantryPageHandler();

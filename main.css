@@ -51,10 +51,11 @@
 }
 
 .lightbox {
-   display: block;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    position: fixed;
-   left: 0%;
-   top: 0%;
+   top: 10%;
    height: 80%;
    text-align: center;
    margin: auto;
