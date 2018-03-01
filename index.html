@@ -48,13 +48,13 @@
                      </div>
                      <ul class="nav navbar-nav flex-item hidden-xs">
                         <li>
-                           <a href="#">Pantry</a>
+                           <a href="#" class="nav-pantry">Pantry</a>
                         </li>
                         <li>
-                           <a href="#">Contact Us</a>
+                           <a href="#" class="nav-contact">Contact Us</a>
                         </li>
                         <li>
-                           <a href="#">The Team</a>
+                           <a href="#" class="nav-team">The Team</a>
                         </li>
                      </ul>
                      <ul class="nav navbar-nav flex-item hidden-xs pull-right">
@@ -69,13 +69,13 @@
                         </button>
                         <ul class="dropdown-menu">
                            <li>
-                              <a href="#">Pantry</a>
+                              <a href="#" class="nav-pantry">Pantry</a>
                            </li>
                            <li>
-                              <a href="#">Contact Us</a>
+                              <a href="#" class="nav-contact">Contact Us</a>
                            </li>
                            <li>
-                              <a href="#">The Team</a>
+                              <a href="#" class="nav-team">The Team</a>
                            </li>
                            <li role="separator" class="divider"></li>
                            <li>
@@ -90,7 +90,8 @@
    </head>
 
    <body id="background">
-      <div class="container-full">
+      <!-- home page -->
+      <div class="container-full home">
 
          <nav class="navbar">
          </nav>
@@ -122,28 +123,92 @@
             </div>
 
          </div>
-      </div>
-      </div>
 
-      <div class="row">
-         <div class="col-md-10 col-md-offset-1 centered">
-            <div class="jumbotron content">
-               <div class="row vertical-align">
-                  <div class="col-md-6 centered render">
-                     <img src="./assets/TOWER_CLOSED.png" style="padding: 2%;">
-                  </div>
-                  <div class="col-md-6 centered render">
-                     <img src="./assets/TOWER_OPEN.png" style="padding: 2%;">
+
+         <div class="row">
+            <div class="col-md-10 col-md-offset-1 centered">
+               <div class="jumbotron content">
+                  <div class="row vertical-align">
+                     <div class="col-md-6 centered render">
+                        <img src="./assets/TOWER_CLOSED.png" style="padding: 2%;">
+                     </div>
+                     <div class="col-md-6 centered render">
+                        <img src="./assets/TOWER_OPEN.png" style="padding: 2%;">
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+
       </div>
 
+      <!-- pantry page -->
+      <div class="container-full pantry hidden">
+         <nav class="navbar">
+         </nav>
+
+         <div class="row main">
+            <div class="col-md-10 col-md-offset-1 centered">
+               <div class="jumbotron content">
+                  <span>
+                     pantry page!
+                  </span>
+               </div>
+            </div>
+
+            <div class="row">
+            </div>
+
+         </div>
+      </div>
+
+      <!-- team page -->
+      <div class="container-full team hidden">
+         <nav class="navbar">
+         </nav>
+
+         <div class="row main">
+            <div class="col-md-10 col-md-offset-1 centered">
+               <div class="jumbotron content">
+                  <span>
+                     team page!
+                  </span>
+               </div>
+            </div>
+
+            <div class="row">
+            </div>
+
+         </div>
+
+         <div class="row">
+         </div>
+
+      </div>
+
+      <!-- contact page -->
+      <div class="container-full contact hidden">
+         <nav class="navbar">
+         </nav>
+
+         <div class="row main">
+            <div class="col-md-10 col-md-offset-1 centered">
+               <div class="jumbotron content">
+                  <span>
+                     contact page!
+                  </span>
+               </div>
+            </div>
+
+            <div class="row">
+            </div>
+
+         </div>
+      </div>
+
+      <!-- lightbox modal -->
       <div class="lightbox hidden">
          <img src="">
-      </div>
-
       </div>
    </body>
 

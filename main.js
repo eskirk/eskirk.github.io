@@ -25,6 +25,51 @@ Clove.addListeners = function() {
          $('.lightbox').toggleClass('hidden');
       }, 500);
    });
+   // click listener for nav bar items
+   Clove.addPantryPageHandler();
+   Clove.addContactPageHandler();
+   Clove.addTeamPageHandler();
+   Clove.addHomePageHandler();
+}
+
+Clove.addPantryPageHandler = function() {
+   $('.nav-pantry').click(function(e) {
+      console.log('pantry');
+      $('.pantry').removeClass('hidden');
+      $('.team').addClass('hidden');
+      $('.contact').addClass('hidden');
+      $('.home').addClass('hidden');
+   });
+}
+
+Clove.addContactPageHandler = function() {
+   $('.nav-contact').click(function(e) {
+      console.log('contact');
+      $('.contact').removeClass('hidden');
+      $('.team').addClass('hidden');
+      $('.home').addClass('hidden');
+      $('.pantry').addClass('hidden');
+   });
+}
+
+Clove.addTeamPageHandler = function() {
+   $('.nav-team').click(function(e) {
+      console.log('team');
+      $('.team').removeClass('hidden');
+      $('.home').addClass('hidden');
+      $('.contact').addClass('hidden');
+      $('.pantry').addClass('hidden');
+   });
+}
+
+Clove.addHomePageHandler = function() {
+   $('.navbar-brand').click(function(e) {
+      console.log('home');
+      $('.home').removeClass('hidden');
+      $('.team').addClass('hidden');
+      $('.contact').addClass('hidden');
+      $('.pantry').addClass('hidden');
+   });
 }
 
 // toggle class scroll 
