@@ -210,3 +210,43 @@
    color: #fff !important;
    background-color: #E6E9ED!important
 }
+
+.two-col {
+  overflow: hidden;
+}
+
+.two-col .col1,
+.two-col .col2 {
+  width: 49%;
+}
+
+.two-col .col1 {
+  float: left;
+  padding-left: 10;
+}
+
+.two-col .col2 {
+  float: right;
+  padding-right: 10;
+}
+
+.two-col label {
+  display: block;
+  text-align: left;
+  padding-left: 10;
+}
+
+.name-field {
+  width: 95%;
+  padding-left: 20;
+}
+
+.email-field {
+  float: left;
+  width: 97.5%;
+}
+
+.email {
+  text-align: left;
+  padding-left: 20;
+}
