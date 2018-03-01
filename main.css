@@ -48,6 +48,7 @@
 .render img {
    width: 100%;
    cursor: pointer;
+   border-radius: 15px;
 }
 
 .lightbox {
@@ -64,6 +65,7 @@
 
 .lightbox img {
    width: 75%;
+   border-radius: 15px;
 }
 
 .zoom {
@@ -230,4 +232,5 @@
 
 input {
    text-align: center;
+   border-radius: 5px;
 }
