@@ -1,5 +1,6 @@
 var Clove = {};
 
+// insert navbar - good for code reusability
 Clove.makeNavbar = function(className) {
    var navbarTemplate = $('#nav_template').html();
    
@@ -9,14 +10,20 @@ Clove.makeNavbar = function(className) {
 }
 
 Clove.addListeners = function() {
+   // click listeners for modal popup
    $('.render').click(function(e) {
       $('.lightbox').children().attr('src', $(this).children().attr('src'));
       $('.lightbox').toggleClass('hidden');
+      $('.lightbox').removeClass('zoom-out');
       $('.lightbox').toggleClass('zoom');
    });
+   // modal listener for shrinking back down
    $('.lightbox').click(function(e) {
+      $('.lightbox').toggleClass('zoom-out');
       $('.lightbox').removeClass('zoom');
-      $('.lightbox').toggleClass('hidden');
+      setTimeout(function(){
+         $('.lightbox').toggleClass('hidden');
+      }, 500);
    });
 }
 
