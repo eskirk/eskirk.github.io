@@ -247,3 +247,12 @@ input {
    height: auto;
    border-radius: 5px;
 }
+
+.img-headers {
+  font-size: 26px;
+  font-style: bold;
+}
+
+.img-desc {
+  padding: 2%;
+}
