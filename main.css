@@ -237,9 +237,13 @@ input {
 }
 
 .top-team-pics {
-   height: 230px;
-   overflow: hidden;
+   height: auto;
+   border-radius: 15px;
+   width: 100%;
 }
 
 .bottom-team-pics {
+   width: 100%;
+   height: auto;
+   border-radius: 5px;
 }
