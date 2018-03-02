@@ -234,3 +234,11 @@ input {
    text-align: center;
    border-radius: 5px;
 }
+
+.top-team-pics {
+   height: 230px;
+   overflow: hidden;
+}
+
+.bottom-team-pics {
+}
