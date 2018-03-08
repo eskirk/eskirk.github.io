@@ -10,43 +10,65 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
          crossorigin="anonymous">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="main.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+      <script src="./main.js"></script>
       <script type="txt/nav_template" id="nav_template">
-            <!-- top nav -->
-            <nav class="navbar navbar-top hidden-xs">
-               <div class="container">
-                  <!-- left nav top -->
-                  <ul class="nav navbar-nav pull-left">
-                     <li>
-                        <a href="#">
-                           <span class="text-white">QUESTIONS? CALL:
-                              <b>+420696969</b>
-                           </span>
-                        </a>
-                     </li>
-                  </ul>
-                  <!-- right nav top -->
-                  <ul class="nav navbar-nav pull-right">
-                     <li>
-                        <a href="#" class="text-white">About Us</a>
-                     </li>
-                     <li>
-                        <a href="#" class="text-white">Contact Us</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="dividline light-grey"></div>
-            </nav>
-            <!-- down nav -->
-            <nav class="navbar navbar-down">
-               <div class="container">
-                  <div class="flex-container">
-                     <div class="navbar-header flex-item">
-                        <div class="navbar-brand">
-                           <img src="./assets/CLOVE.png" style="width: 200px;">
-                        </div>
+         <!-- top nav -->
+         <nav class="navbar navbar-top hidden-xs">
+            <div class="container">
+               <!-- left nav top -->
+               <ul class="nav navbar-nav pull-left">
+                  <li>
+                     <a href="#">
+                        <span class="text-white">QUESTIONS? EMAIL US AT:
+                           <b>getcloveusa@gmail.com</b>
+                        </span>
+                     </a>
+                  </li>
+               </ul>
+               <!-- right nav top -->
+               <ul class="nav navbar-nav pull-right">
+                  <li>
+                     <a href="#" class="text-white">About Us</a>
+                  </li>
+                  <li>
+                     <a href="#" class="text-white">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="dividline light-grey"></div>
+         </nav>
+         <!-- down nav -->
+         <nav class="navbar navbar-down">
+            <div class="container">
+               <div class="flex-container">
+                  <div class="navbar-header flex-item">
+                     <div class="navbar-brand">
+                        <img src="./assets/CLOVE.png" style="width: 200px;">
                      </div>
-                     <ul class="nav navbar-nav flex-item hidden-xs">
+                  </div>
+                  <ul class="nav navbar-nav flex-item hidden-xs">
+                     <li>
+                        <a href="#" class="nav-pantry">Pantry</a>
+                     </li>
+                     <li>
+                        <a href="#" class="nav-contact">Contact Us</a>
+                     </li>
+                     <li>
+                        <a href="#" class="nav-team">The Team</a>
+                     </li>
+                  </ul>
+                  <ul class="nav navbar-nav flex-item hidden-xs pull-right">
+                     <li>
+                        <a href="https://www.facebook.com/cloveusa/" class="">FB</a>
+                     </li>
+                  </ul>
+                  <!-- <!-- dropdown only moblie -->
+                  <div class="dropdown visible-xs pull-right">
+                     <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                     </button>
+                     <ul class="dropdown-menu">
                         <li>
                            <a href="#" class="nav-pantry">Pantry</a>
                         </li>
@@ -56,36 +78,15 @@
                         <li>
                            <a href="#" class="nav-team">The Team</a>
                         </li>
-                     </ul>
-                     <ul class="nav navbar-nav flex-item hidden-xs pull-right">
+                        <li role="separator" class="divider"></li>
                         <li>
-                           <a href="#" class="">FB</a>
+                           <a href="#">contact us</a>
                         </li>
                      </ul>
-                     <!-- <!-- dropdown only moblie -->
-                     <div class="dropdown visible-xs pull-right">
-                        <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
-                           <span class="glyphicon glyphicon-align-justify"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                           <li>
-                              <a href="#" class="nav-pantry">Pantry</a>
-                           </li>
-                           <li>
-                              <a href="#" class="nav-contact">Contact Us</a>
-                           </li>
-                           <li>
-                              <a href="#" class="nav-team">The Team</a>
-                           </li>
-                           <li role="separator" class="divider"></li>
-                           <li>
-                              <a href="#">contact us</a>
-                           </li>
-                        </ul>
-                     </div>
                   </div>
                </div>
-            </nav>
+            </div>
+         </nav>
       </script>
    </head>
 
@@ -117,47 +118,21 @@
                      </div>
                   </div>
 
+
                   <div class="learn-more">
                      <span class="big">
                         Want To Learn More?
                      </span>
                   </div>
-                  <div class="row">
-                     <div class="col">
-                        <div class="row field">
-                           <input class="name-field" id="field1" name="field1" type="text">
-                           <div class="row">
-                              <span>
-                                 First Name
-                              </span>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col">
-                        <div class="row field">
-                           <input class="name-field" id="field2" name="field2" type="text">
-                           <div class="row">
-                              <span>
-                                 Last Name
-                              </span>
-                           </div>
-                        </div>
-                     </div>
+                  <div class="jumbotron">
+                     <form method="POST" onsubmit="javascript:return sendEmail();">
+                        <input class="name-field" type="text" name="name" placeholder="full name">
+                        <input class="email-field" type="email" name="email" placeholder="email">
+                        <br>
+                        <input class="submit" type="submit" value="Submit">
+                     </form>
                   </div>
 
-                  <div class="row">
-                     <div class="col">
-                        <div class="row field">
-                           <input class="email-field" id="field3" name="field3" type="text">
-                           <div class="row">
-                              <span>
-                                 Email Address
-                              </span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
                </div>
             </div>
          </div>
@@ -190,18 +165,17 @@
             <div class="col-md-10 col-md-offset-1 centered">
                <div class="jumbotron content">
                   <span>
-                    <div class="centered welcome big">
-                       <span>
-                          Pantry by Clove
-                       </span>
-                    </div>
+                     <div class="centered welcome big">
+                        <span>
+                           Pantry by Clove
+                        </span>
+                     </div>
                   </span>
                   <br>
                   <div>
-                  Pantry is an automated environment for growing culinary produce.
-                  The environment is automated to maintain a stable environment for optimal plant growth.
-                  Pantry eliminates the need for human-monitored garden maintenance, and instead employs
-                  automated aeroponics technology, leading to faster rates of growth and greater plant yield.
+                     Pantry is an automated environment for growing culinary produce. The environment is automated to maintain a stable environment
+                     for optimal plant growth. Pantry eliminates the need for human-monitored garden maintenance, and instead
+                     employs automated aeroponics technology, leading to faster rates of growth and greater plant yield.
                   </div>
                   <br/>
                   <br/>
@@ -212,13 +186,12 @@
                         <br/>
                         <br/>
                         <div class="img-headers">
-                          Automated Aeroponics
+                           Automated Aeroponics
                         </div>
                         <br/>
                         <div class="img-desc">
-                          Aeroponic plant systems have been shown to increase
-                          rates of growth as well as overall crop yield.
-                          Leading to more fresh herbs and vegetables for you.
+                           Aeroponic plant systems have been shown to increase rates of growth as well as overall crop yield. Leading to more fresh
+                           herbs and vegetables for you.
                         </div>
                      </div>
                      <div class="col-md-6 centered render">
@@ -226,12 +199,12 @@
                         <br/>
                         <br/>
                         <div class="img-headers">
-                          Optimized Lighting Cycles
+                           Optimized Lighting Cycles
                         </div>
                         <br/>
                         <div class="img-desc">
-                          Although plants are traditionally grown outdoor in a 24-hour light-dark cycle,
-                          growing them in a more efficient light cycle further increases growth rates.
+                           Although plants are traditionally grown outdoor in a 24-hour light-dark cycle, growing them in a more efficient light cycle
+                           further increases growth rates.
                         </div>
                      </div>
                   </div>
@@ -337,7 +310,7 @@
                      <div class="col-md-4" style="padding-top: 2%;">
                         <div class="big" style="text-align:left;">Contact Us</div>
                         <div style="text-align:left;">
-                          Please feel free to contact us about any questions you may have.
+                           Please feel free to contact us about any questions you may have.
                         </div>
                      </div>
                      <div class="col-md-4">
@@ -352,49 +325,49 @@
                         </div>
                      </div>
                      <div class="col-md-4">
-                      <br/>
-                      <div class="row field" style="padding-bottom:2%;">
-                         <input class="last-name-field" id="field5" name="field5" type="text" style="width:95%;">
-                         <div class="row">
-                            <span style="float:left;padding-left:7%;">
-                               Last Name
-                            </span>
-                         </div>
-                      </div>
+                        <br/>
+                        <div class="row field" style="padding-bottom:2%;">
+                           <input class="last-name-field" id="field5" name="field5" type="text" style="width:95%;">
+                           <div class="row">
+                              <span style="float:left;padding-left:7%;">
+                                 Last Name
+                              </span>
+                           </div>
+                        </div>
                      </div>
-                 </div>
-                 <div class="row vertical-align">
-                   <div class="col-md-4">
-                   </div>
-                 <div class="col-md-8">
-                    <span style="float:left;">Email Address *</span>
-                    <div class="row field">
-                       <input class="contact-fields"id="field6" name="field6" type="text">
-                    </div>
-                 </div>
-               </div>
-               <br/>
-               <div class="row vertical-align">
-                 <div class="col-md-4">
-                 </div>
-               <div class="col-md-8">
-                  <span style="float:left;">Subject *</span>
-                  <div class="row field">
-                     <input class="contact-fields" id="field6" name="field6" type="text">
                   </div>
-               </div>
-             </div>
-             <br/>
-             <div class="row vertical-align">
-               <div class="col-md-4">
-               </div>
-             <div class="col-md-8">
-                <span style="float:left;">Message *</span>
-                <div class="row field">
-                   <textarea class="contact-fields" id="field7" name="field7" rows="5" type="text" style="resize:none;"></textarea>
-                </div>
-             </div>
-           </div>
+                  <div class="row vertical-align">
+                     <div class="col-md-4">
+                     </div>
+                     <div class="col-md-8">
+                        <span style="float:left;">Email Address *</span>
+                        <div class="row field">
+                           <input class="contact-fields" id="field6" name="field6" type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <br/>
+                  <div class="row vertical-align">
+                     <div class="col-md-4">
+                     </div>
+                     <div class="col-md-8">
+                        <span style="float:left;">Subject *</span>
+                        <div class="row field">
+                           <input class="contact-fields" id="field6" name="field6" type="text">
+                        </div>
+                     </div>
+                  </div>
+                  <br/>
+                  <div class="row vertical-align">
+                     <div class="col-md-4">
+                     </div>
+                     <div class="col-md-8">
+                        <span style="float:left;">Message *</span>
+                        <div class="row field">
+                           <textarea class="contact-fields" id="field7" name="field7" rows="5" type="text" style="resize:none;"></textarea>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
 
