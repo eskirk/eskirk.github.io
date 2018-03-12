@@ -89,7 +89,8 @@ var sendEmail = function () {
    }
 
    if (info.name && info.email.indexOf('@') != -1) {
-      firebase.database().ref().child('users/' + info.email.hashCode()).set(info);
+      var now = new Date().getTime();
+      firebase.database().ref().child('users/' + now).set(info);
       alert('You are now subscribed to our mailing list!');
       $('.submit').prop('disabled', true);
    }
@@ -115,15 +116,3 @@ $(document).ready(function () {
    Clove.makeNavbar('navbar');
    Clove.addListeners();
 });
-
-// Turn the email into a hash to be used for the database key
-String.prototype.hashCode = function() {
-   var hash = 0, i, chr;
-   if (this.length === 0) return hash;
-   for (i = 0; i < this.length; i++) {
-     chr   = this.charCodeAt(i);
-     hash  = ((hash << 5) - hash) + chr;
-     hash |= 0; // Convert to 32bit integer
-   }
-   return hash;
- };
