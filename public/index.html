@@ -65,12 +65,17 @@
                         <a href="https://www.facebook.com/cloveusa/" class="">FB</a>
                      </li>
                   </ul>
-                  <!-- <!-- dropdown only moblie -->
-                  <div class="dropdown visible-xs pull-right">
-                     <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-align-justify"></span>
-                     </button>
-                     <ul class="dropdown-menu">
+                  <!-- <!-- dropdown only mobile -->
+                  <div class="dropdown">
+                     <div class="nav-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
+                     <ul class="drop-menu hidden">
+                        <li>
+                           <a href="#" class="nav-home">Home</a>
+                        </li>
                         <li>
                            <a href="#" class="nav-pantry">Pantry</a>
                         </li>
@@ -79,10 +84,6 @@
                         </li>
                         <li>
                            <a href="#" class="nav-team">The Team</a>
-                        </li>
-                        <li role="separator" class="divider"></li>
-                        <li>
-                           <a href="#">contact us</a>
                         </li>
                      </ul>
                   </div>
@@ -100,7 +101,7 @@
          </nav>
 
          <div class="row main">
-            <div class="col-md-10 col-md-offset-1 centered">
+            <div class="col-md-12 centered">
                <div class="jumbotron content">
 
                   <div class="row vertical-align">
@@ -120,20 +121,24 @@
                      </div>
                   </div>
 
+                  <hr>
 
                   <div class="learn-more">
                      <span class="big">
                         Want To Learn More?
                      </span>
+                     <br>
+                     <span>
+                        Sign up for our mailing list
+                     </span>
                   </div>
-                  <div class="jumbotron">
-                     <form method="POST" onsubmit="javascript:return sendEmail();">
-                        <input class="name-field" type="text" name="name" placeholder="full name">
-                        <input class="email-field" type="email" name="email" placeholder="email">
-                        <br>
-                        <input class="submit" type="submit" value="Submit">
-                     </form>
-                  </div>
+                  <br>
+                  <form method="POST" onsubmit="javascript:return sendEmail();">
+                     <input class="field name-field" type="text" name="name" placeholder="full name">
+                     <input class="field email-field" type="email" name="email" placeholder="email">
+                     <br>
+                     <input class="submit" type="submit" value="Submit">
+                  </form>
 
                </div>
             </div>
@@ -142,14 +147,11 @@
 
 
          <div class="row">
-            <div class="col-md-10 col-md-offset-1 centered">
+            <div class="col-md-12 centered">
                <div class="jumbotron content">
                   <div class="row vertical-align">
-                     <div class="col-md-6 centered render">
-                        <img src="./assets/TOWER_CLOSED.png" style="padding: 2%;">
-                     </div>
-                     <div class="col-md-6 centered render">
-                        <img src="./assets/TOWER_OPEN.png" style="padding: 2%;">
+                     <div class="col-md-10 centered rendering col-md-offset-1">
+                        <img src="./assets/RENDERING.png" style="padding: 2%;">
                      </div>
                   </div>
                </div>
@@ -164,7 +166,7 @@
          </nav>
 
          <div class="row main">
-            <div class="col-md-10 col-md-offset-1 centered">
+            <div class="col-md-12 centered">
                <div class="jumbotron content">
                   <span>
                      <div class="centered welcome big">
@@ -173,7 +175,6 @@
                         </span>
                      </div>
                   </span>
-                  <br>
                   <div>
                      Pantry is an automated environment for growing culinary produce. The environment is automated to maintain a stable environment
                      for optimal plant growth. Pantry eliminates the need for human-monitored garden maintenance, and instead
@@ -183,31 +184,8 @@
                   <br/>
                   <br/>
                   <div class="row vertical-align">
-                     <div class="col-md-6 centered render">
-                        <img src="./assets/TOWER_CLOSED.png" style="padding: 2%;">
-                        <br/>
-                        <br/>
-                        <div class="img-headers">
-                           Automated Aeroponics
-                        </div>
-                        <br/>
-                        <div class="img-desc">
-                           Aeroponic plant systems have been shown to increase rates of growth as well as overall crop yield. Leading to more fresh
-                           herbs and vegetables for you.
-                        </div>
-                     </div>
-                     <div class="col-md-6 centered render">
-                        <img src="./assets/TOWER_OPEN.png" style="padding: 2%;">
-                        <br/>
-                        <br/>
-                        <div class="img-headers">
-                           Optimized Lighting Cycles
-                        </div>
-                        <br/>
-                        <div class="img-desc">
-                           Although plants are traditionally grown outdoor in a 24-hour light-dark cycle, growing them in a more efficient light cycle
-                           further increases growth rates.
-                        </div>
+                     <div class="col-md-10 centered rendering col-md-offset-1">
+                        <img src="./assets/RENDERING.png" style="padding: 2%;">
                      </div>
                   </div>
                </div>
@@ -226,67 +204,41 @@
          </nav>
 
          <div class="row main">
-            <div class="col-md-10 col-md-offset-1 centered">
+            <div class="col-md-12 centered">
                <div class="jumbotron content" style="padding: 1%;">
-                  <span>
-                     <div class="centered welcome big">
-                        <span>
-                           The Team
-                        </span>
+                  <div class="centered welcome big">
+                     <span>
+                        The Team
+                     </span>
+                  </div>
+                  <br>
+                  <div class="row vertical-align">
+                     <div class="col-md-3">
+                        <img src="./assets/aaron.jpg" class="top-team-pics"> Aaron Quinn
                      </div>
-                     <br>
-                     <div class="row vertical-align">
-                        <div class="col-md-3">
-                           <img src="./assets/aaron.jpg" class="top-team-pics">
-                        </div>
-                        <div class="col-md-3">
-                           <img src="./assets/kieran.jpg" class="top-team-pics">
-                        </div>
-                        <div class="col-md-3">
-                           <img src="./assets/matt.jpg" class="top-team-pics">
-                        </div>
-                        <div class="col-md-3">
-                           <img src="./assets/aj.jpg" class="top-team-pics">
-                        </div>
+                     <div class="col-md-3">
+                        <img src="./assets/kieran.jpg" class="top-team-pics"> Kieran Scandrett
                      </div>
-                     <div class="row vertical-align">
-                        <div class="col-md-3">
-                           Aaron Quinn
-                        </div>
-                        <div class="col-md-3">
-                           Kieran Scandrett
-                        </div>
-                        <div class="col-md-3">
-                           Matthew Callaghan
-                        </div>
-                        <div class="col-md-3">
-                           AJ Gankhuyag
-                        </div>
+                     <div class="col-md-3">
+                        <img src="./assets/matt.jpg" class="top-team-pics"> Matthew Callaghan
                      </div>
-                     <br>
-                     <div class="row vertical-align">
-                        <div class="col-md-4">
-                           <img src="./assets/lam.png" class="bottom-team-pics">
-                        </div>
-                        <div class="col-md-4">
-                           <img src="./assets/decker.png" class="bottom-team-pics">
-                        </div>
-                        <div class="col-md-4">
-                           <img src="./assets/thekirkman.png" class="bottom-team-pics">
-                        </div>
+                     <div class="col-md-3">
+                        <img src="./assets/aj.jpg" class="top-team-pics"> AJ Gankhuyag
                      </div>
-                     <div class="row vertical-align">
-                        <div class="col-md-4">
-                           Andrew Lam
-                        </div>
-                        <div class="col-md-4">
-                           Alex Decker
-                        </div>
-                        <div class="col-md-4">
-                           Elliot Kirk
-                        </div>
+                  </div>
+                  <br>
+                  <div class="row vertical-align">
+                     <div class="col-md-4">
+                        <img src="./assets/lam.png" class="bottom-team-pics"> Andrew Lam
                      </div>
-                  </span>
+                     <div class="col-md-4">
+                        <img src="./assets/decker.png" class="bottom-team-pics"> Alex Decker
+                     </div>
+                     <div class="col-md-4">
+                        <img src="./assets/thekirkman.png" class="bottom-team-pics"> Elliot Kirk
+                     </div>
+                  </div>
+
                </div>
             </div>
 
@@ -306,82 +258,97 @@
          </nav>
 
          <div class="row main">
-            <div class="col-md-10 col-md-offset-1 centered">
+            <div class="col-md-12 centered">
                <div class="jumbotron content" style="padding: 1%;">
-                  <div class="row vertical-align">
-                     <div class="col-md-4" style="padding-top: 2%;">
-                        <div class="big" style="text-align:left;">Contact Us</div>
-                        <div style="text-align:left;">
-                           Please feel free to contact us about any questions you may have.
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <span style="float:left;">Name *</span>
-                        <div class="row field">
-                           <input class="first-name-field" id="field4" name="field4" type="text" style="width:95%;">
-                           <div class="row">
-                              <span style="float:left;padding-left:7%;">
-                                 First Name
-                              </span>
+                  <div class="row">
+                     <form method="POST" onsubmit="javascript:return contactUs();">
+                        <div class="row vertical-align">
+                           <div class="col-md-12 contact-field" style="padding-top: 2%;">
+                              <div class="big" style="text-align:center;">Contact Us</div>
+                              <div style="text-align:center; margin-bottom: 1%;">
+                                 Please feel free to contact us about any questions you may have.
+                              </div>
                            </div>
                         </div>
-                     </div>
-                     <div class="col-md-4">
-                        <br/>
-                        <div class="row field" style="padding-bottom:2%;">
-                           <input class="last-name-field" id="field5" name="field5" type="text" style="width:95%;">
-                           <div class="row">
-                              <span style="float:left;padding-left:7%;">
-                                 Last Name
-                              </span>
+                        <div class="row vertical-align">
+                           <div class="col-md-12 contact-field">
+                              <div class="row vertical-align mx-auto">
+                                 <div class="col-md-12 contact-field">
+                                    <!-- <span style="float:left; padding-left:2%;">Name *</span> -->
+                                    <div class="row">
+                                       <input class="field contact-name-field" id="field4" name="field4" type="text" placeholder="Name *">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row vertical-align mx-auto">
+                                 <div class="col-md-12 contact-field">
+                                    <!-- <span style="float:left; padding-left:2%;">Email Address *</span> -->
+                                    <div class="row">
+                                       <input class="field contact-email-field" id="field6" name="field6" type="text" placeholder="Email Address *">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row vertical-align mx-auto">
+                                 <div class="col-md-12 contact-field">
+                                    <!-- <span style="float:left; padding-left:2%;">Subject *</span> -->
+                                    <div class="row">
+                                       <input class="field subject-field" id="field6" name="field6" type="text" placeholder="Subject">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row vertical-align">
+                                 <div class="col-md-12 contact-field">
+                                    <div class="row">
+                                       <textarea class="message-field" id="field7" name="field7" rows="5" type="text" style="resize:none;" placeholder="Message *"></textarea>
+                                    </div>
+                                 </div>
+                              </div>
+                              <br/>
+                              <div class="row vertical-align">
+                                 <div class="col-md-12 contact-field">
+                                    <input class="submit contact-submit" type="submit" value="Submit">
+                                 </div>
+                              </div>
                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="row vertical-align">
-                     <div class="col-md-4">
-                     </div>
-                     <div class="col-md-8">
-                        <span style="float:left;">Email Address *</span>
-                        <div class="row field">
-                           <input class="contact-fields" id="field6" name="field6" type="text">
-                        </div>
-                     </div>
-                  </div>
-                  <br/>
-                  <div class="row vertical-align">
-                     <div class="col-md-4">
-                     </div>
-                     <div class="col-md-8">
-                        <span style="float:left;">Subject *</span>
-                        <div class="row field">
-                           <input class="contact-fields" id="field6" name="field6" type="text">
-                        </div>
-                     </div>
-                  </div>
-                  <br/>
-                  <div class="row vertical-align">
-                     <div class="col-md-4">
-                     </div>
-                     <div class="col-md-8">
-                        <span style="float:left;">Message *</span>
-                        <div class="row field">
-                           <textarea class="contact-fields" id="field7" name="field7" rows="5" type="text" style="resize:none;"></textarea>
-                        </div>
-                     </div>
+                     </form>
                   </div>
                </div>
             </div>
-
-            <div class="row">
-            </div>
-
          </div>
       </div>
 
       <!-- lightbox modal -->
       <div class="lightbox hidden vertical-align">
          <img src="">
+      </div>
+
+      <!-- email confirmation modal -->
+      <div class="jumbotron hidden confirmation vertical-align">
+         <div class="row">
+            <div class="col-md-12 centered">
+               <h2>
+                  Thank you for subscribing to the Clove mailing list!
+               </h2>
+               <span>
+                  (click anywhere to close)
+               </span>
+            </div>
+         </div>
+      </div>
+
+      <!-- contact us confirmation modal -->
+      <div class="jumbotron hidden message-confirmation vertical-align">
+         <div class="row">
+            <div class="col-md-12 centered">
+               <h2>
+                  Thanks for reaching out to us! We will respond to your question shortly.
+               </h2>
+               <span>
+                  (click anywhere to close)
+               </span>
+            </div>
+         </div>
       </div>
    </body>
 

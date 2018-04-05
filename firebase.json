@@ -1,16 +1,23 @@
 {
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [{
-      "source": "/email", "function": "email"
-    }]
-  }
+   "database": {
+      "rules": "database.rules.json"
+   },
+   "hosting": {
+      "public": "public",
+      "ignore": [
+         "firebase.json",
+         "**/.*",
+         "**/node_modules/**"
+      ],
+      "rewrites": [
+      {
+         "source": "/email",
+         "function": "email"
+      },
+      {
+         "source": "/contact",
+         "function": "contactUs"
+      }
+   ]
+   }
 }

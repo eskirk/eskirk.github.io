@@ -10,10 +10,17 @@
 
 #background {
    background-image: url("./assets/PLANTS.jpg");
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
    background-size: cover;
-   background-repeat: no-repat;
    height: 1500px;
    font-family: Moon;
+}
+
+.centered-row {
+   display: flex;
+   justify-content: center;
 }
 
 .main {
@@ -35,20 +42,16 @@
    font-weight: bold;
 }
 
-.content {
-   padding-top: 20%;
-   border-radius: 5px;
-   text-align: center;
-   transition: opacity .2s ease-in, box-shadow .2s ease-in;
-   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-   margin: 10px;
-   opacity: .95;
-}
-
 .render img {
    width: 100%;
    cursor: pointer;
-   border-radius: 15px;
+   border-radius: 30px;
+}
+
+.rendering img {
+   width: 100%;
+   cursor: pointer;
+   border-radius: 30px;
 }
 
 .lightbox {
@@ -62,6 +65,22 @@
    text-align: center;
    margin: auto;
    z-index: 10;
+}
+
+.confirmation,
+.message-confirmation {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   top: 10%;
+   height: 80%;
+   width: 100%;
+   text-align: center;
+   margin: auto;
+   z-index: 1000;
+   border-radius: 15px;
+   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .lightbox img {
@@ -81,11 +100,6 @@
 
 .hidden {
    display: none;
-}
-
-.content:hover {
-   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-   opacity: 1;
 }
 
 @keyframes zoom {
@@ -184,12 +198,11 @@
    color: #fff;
 }
 
-.navbar-doublerow .navbar-down .dropdown ul>li>a, .navbar-doublerow .navbar-down .dropdown ul>li>a:hover {
+.navbar-doublerow .navbar-down .dropdown ul>li>a,
+.navbar-doublerow .navbar-down .dropdown ul>li>a:hover {
    color: #fff;
    border-bottom: none;
 }
-
-.navbar-doublerow.navbar-trans.afterscroll {}
 
 .navbar-doublerow.navbar-trans.afterscroll {
    top: -50px;
@@ -200,11 +213,101 @@
    justify-content: space-between;
 }
 
-.flex-item {}
+.drop-menu {
+   position: absolute;
+   top: 100%;
+   left: -100;
+   z-index: 1000;
+   float: left;
+   min-width: 160px;
+   padding: 10px 10px;
+   margin: 2px 0 0;
+   list-style: none;
+   text-align: left;
+   background-color: #EEEEEE;
+   border: 1px solid;
+   border-radius: 5px;
+   box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+   background-clip: padding-box;
+}
+
+.drop-menu li>a {
+   color: black !important;
+   text-decoration: none;
+}
+
+.nav-icon {
+   width: 60px;
+   height: 45px;
+   position: relative;
+   margin-top: 30px;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -webkit-transition: .5s ease-in-out;
+   -moz-transition: .5s ease-in-out;
+   -o-transition: .5s ease-in-out;
+   transition: .5s ease-in-out;
+   cursor: pointer;
+}
+
+.nav-icon span {
+   display: block;
+   position: absolute;
+   height: 5px;
+   width: 100%;
+   background: white;
+   border-radius: 9px;
+   opacity: 1;
+   left: 0;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -webkit-transition: .25s ease-in-out;
+   -moz-transition: .25s ease-in-out;
+   -o-transition: .25s ease-in-out;
+   transition: .25s ease-in-out;
+   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.nav-icon span:nth-child(1) {
+   top: 0px;
+}
+
+.nav-icon span:nth-child(2) {
+   top: 18px;
+}
+
+.nav-icon span:nth-child(3) {
+   top: 36px;
+}
+
+.nav-icon.open span:nth-child(1) {
+   top: 18px;
+   -webkit-transform: rotate(135deg);
+   -moz-transform: rotate(135deg);
+   -o-transform: rotate(135deg);
+   transform: rotate(135deg);
+}
+
+.nav-icon.open span:nth-child(2) {
+   opacity: 0;
+   left: -60px;
+}
+
+.nav-icon.open span:nth-child(3) {
+   top: 18px;
+   -webkit-transform: rotate(-135deg);
+   -moz-transform: rotate(-135deg);
+   -o-transform: rotate(-135deg);
+   transform: rotate(-135deg);
+}
 
 /*text*/
-
-.text-white, .text-white-hover:hover {
+.text-white,
+.text-white-hover:hover {
    color: #fff !important;
 }
 
@@ -212,23 +315,19 @@
 
 .light-grey {
    color: #fff !important;
-   background-color: #E6E9ED!important
+   background-color: #E6E9ED !important
 }
 
 .name-field {
-  width: 50%;
+   width: 50%;
 }
 
 .email-field {
-  width: 50%;
+   width: 50%;
 }
 
 .field {
    padding: 1%;
-}
-
-.learn-more {
-   margin-top: 5%;
 }
 
 input {
@@ -236,8 +335,11 @@ input {
    border-radius: 5px;
 }
 
+textarea {
+   border-radius: 5px;
+}
+
 .top-team-pics {
-   height: auto;
    border-radius: 15px;
    width: 100%;
 }
@@ -249,14 +351,131 @@ input {
 }
 
 .img-headers {
-  font-size: 26px;
-  font-style: bold;
+   font-size: 26px;
+   font-style: bold;
 }
 
 .img-desc {
-  padding: 2%;
+   padding: 2%;
 }
 
+.contact-us {
+   text-align: center;
+}
+
+.contact-field {
+   width: 100%;
+   margin: 0 2%;
+}
+
+.contact-email-field,
+.subject-field,
+.last-name-field,
+.contact-name-field,
 .contact-fields {
-  width: 98%;
+   width: 98%;
+}
+
+.contact-submit {
+   padding: 1%;
+}
+
+.submit {
+   border: none;
+}
+
+.row {
+   margin: 0 !important;
+}
+
+@media all and (min-width: 768px) {
+   .message-field {
+      width: 60%;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+      padding: 1%;
+      transition: opacity .2s ease-in, box-shadow .2s ease-in;
+   }
+   .field {
+      width: 60%;
+      outline: none;
+      height: 35px;
+      padding-left: 15px;
+      border: none;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      transition: opacity .2s ease-in, box-shadow .2s ease-in;
+   }
+   .content {
+      padding-top: 20%;
+      text-align: center;
+      transition: opacity .2s ease-in, box-shadow .2s ease-in;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      opacity: 1;
+   }
+   .dropdown {
+      display: none;
+   }
+}
+
+@media all and (max-width: 767px) {
+   .message-field {
+      width: 98%;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+      padding: 1%;
+      transition: opacity .2s ease-in, box-shadow .2s ease-in;
+   }
+   .field {
+      outline: none;
+      height: 35px;
+      padding-left: 15px;
+      border: none;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      transition: opacity .2s ease-in, box-shadow .2s ease-in;
+   }
+   .content {
+      padding-top: 20%;
+      margin-top: 10%;
+      text-align: center;
+      transition: opacity .2s ease-in, box-shadow .2s ease-in;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      opacity: 1;
+   }
+   .dropdown {
+      display: inherit;
+   }
+}
+
+.message-field:focus {
+   transition: opacity .2s ease-in, box-shadow .2s ease-in;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.field:focus {
+   transition: opacity .2s ease-in, box-shadow .2s ease-in;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Message field placeholder */
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder {
+   /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {
+   /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
 }

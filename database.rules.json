@@ -3,6 +3,10 @@
      "users": {
          ".read": "auth != null",
          ".write": true
+     },
+     "contact": {
+         ".read": "auth != null",
+         ".write": true
      }
   }
 }

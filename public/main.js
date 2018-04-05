@@ -13,19 +13,46 @@ Clove.addListeners = function () {
    // click listeners for modal popup
    $('.render').click(function (e) {
       $('.lightbox').children().attr('src', $(this).children().attr('src'));
-      $('.lightbox').toggleClass('hidden');
+      $('.lightbox').removeClass('hidden');
+      $('.lightbox').addClass('zoom');
       $('.lightbox').removeClass('zoom-out');
-      $('.lightbox').toggleClass('zoom');
    });
    // modal listener for shrinking back down
    $('.lightbox').click(function (e) {
-      $('.lightbox').toggleClass('zoom-out');
+      $('.lightbox').addClass('zoom-out');
       $('.lightbox').removeClass('zoom');
       // 
       setTimeout(function () {
-         $('.lightbox').toggleClass('hidden');
+         $('.lightbox').addClass('hidden');
       }, 400);
    });
+   // confirmation modal listener
+   $('.confirmation').click(function (e) {
+      $('.confirmation').addClass('zoom-out');
+      $('.confirmation').removeClass('zoom');
+      // 
+      setTimeout(function () {
+         $('.confirmation').addClass('hidden');
+      }, 400);
+   });
+   // contact us confirmation modal listener
+   $('.message-confirmation').click(function (e) {
+      $('.message-confirmation').addClass('zoom-out');
+      $('.message-confirmation').removeClass('zoom');
+      // 
+      setTimeout(function () {
+         $('.message-confirmation').addClass('hidden');
+      }, 400);
+   });
+   // dropdown toggle button listener
+   $('.nav-icon').click(function(e) {
+      $('.drop-menu').toggleClass('hidden');
+   });
+   // hamburger icon listener
+   $('.nav-icon').click(function(){
+      $('.nav-icon').toggleClass('open');
+      console.log('yo');
+	});
    // click listener for nav bar items
    Clove.addPantryPageHandler();
    Clove.addContactPageHandler();
@@ -71,6 +98,14 @@ Clove.addHomePageHandler = function () {
       $('.contact').addClass('hidden');
       $('.pantry').addClass('hidden');
    });
+
+   $('.nav-home').click(function (e) {
+      console.log('home');
+      $('.home').removeClass('hidden');
+      $('.team').addClass('hidden');
+      $('.contact').addClass('hidden');
+      $('.pantry').addClass('hidden');
+   });
 }
 
 // Firebase config
@@ -81,7 +116,8 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var sendEmail = function () {
+// subscribe to the mailing list
+var sendEmail = function() {
    var info = {
       email: $('.email-field').val(),
       name: $('.name-field').val(),
@@ -91,11 +127,37 @@ var sendEmail = function () {
    if (info.name && info.email.indexOf('@') != -1) {
       var now = new Date().getTime();
       firebase.database().ref().child('users/' + now).set(info);
-      alert('You are now subscribed to our mailing list!');
+      // alert('You are now subscribed to our mailing list!');
+      $('.confirmation').toggleClass('hidden');
       $('.submit').prop('disabled', true);
    }
    else 
       alert('Incorrect format, try again');
+
+   return false;
+}
+
+// contact us 
+var contactUs = function() {
+   var info = {
+      email: $('.contact-email-field').val(),
+      name: $('.contact-name-field').val(),
+      subject: $('.subject-field').val(),
+      message: $('.message-field').val()
+   }
+
+   if (info.name && info.email.indexOf('@') != -1) {
+      var now = new Date().getTime();
+      firebase.database().ref().child('contact/' + now).set(info);
+      // alert('You are now subscribed to our mailing list!');
+      console.log(info);
+      $('.message-confirmation').toggleClass('hidden');
+      $('.contact-submit').prop('disabled', true);
+   }
+   else {
+      alert('Incorrect format, try again');
+      console.log(info);
+   }
 
    return false;
 }
