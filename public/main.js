@@ -58,6 +58,7 @@ Clove.addListeners = function () {
    Clove.addContactPageHandler();
    Clove.addTeamPageHandler();
    Clove.addHomePageHandler();
+   Clove.addFaqPageHandler();
 }
 
 Clove.addPantryPageHandler = function () {
@@ -67,6 +68,7 @@ Clove.addPantryPageHandler = function () {
       $('.team').addClass('hidden');
       $('.contact').addClass('hidden');
       $('.home').addClass('hidden');
+      $('.faq').addClass('hidden');
    });
 }
 
@@ -77,6 +79,7 @@ Clove.addContactPageHandler = function () {
       $('.team').addClass('hidden');
       $('.home').addClass('hidden');
       $('.pantry').addClass('hidden');
+      $('.faq').addClass('hidden');
    });
 }
 
@@ -87,6 +90,18 @@ Clove.addTeamPageHandler = function () {
       $('.home').addClass('hidden');
       $('.contact').addClass('hidden');
       $('.pantry').addClass('hidden');
+      $('.faq').addClass('hidden');
+   });
+}
+
+Clove.addFaqPageHandler = function () {
+   $('.nav-faq').click(function (e) {
+      console.log('faq');
+      $('.faq').removeClass('hidden');
+      $('.team').addClass('hidden');
+      $('.home').addClass('hidden');
+      $('.pantry').addClass('hidden');
+      $('.contact').addClass('hidden');
    });
 }
 
@@ -97,6 +112,7 @@ Clove.addHomePageHandler = function () {
       $('.team').addClass('hidden');
       $('.contact').addClass('hidden');
       $('.pantry').addClass('hidden');
+      $('.faq').addClass('hidden');
    });
 
    $('.nav-home').click(function (e) {
@@ -105,6 +121,7 @@ Clove.addHomePageHandler = function () {
       $('.team').addClass('hidden');
       $('.contact').addClass('hidden');
       $('.pantry').addClass('hidden');
+      $('.faq').addClass('hidden');
    });
 }
 

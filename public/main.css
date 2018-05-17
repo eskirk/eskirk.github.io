@@ -8,6 +8,10 @@
    src: url(./assets/fonts/MoonBold.otf);
 }
 
+h3 {
+   font-family: 'Poppins', sans-serif !important;
+}
+
 #background {
    /* background-image: url("./assets/PLANTS.jpg");
    background-attachment: fixed;
@@ -16,9 +20,9 @@
    background-size: cover;
    height: 1500px; */
    background: #c9de96; /* Old browsers */
-   background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6-15 */
-   background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10-25,Safari5.1-6 */
-   background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   background: -moz-linear-gradient(top, #398235d3 0%, #8ab66b 44%, #c9de96 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(top, #398235d3 0%, #8ab66b 44%, #c9de96 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to bottom, #398235d3 0%, #8ab66b 44%, #c9de96 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    font-family: 'Roboto Slab', serif;
 }
 
@@ -35,7 +39,6 @@
 
 .welcome {
    margin: 5px 30px;
-   font-family: 'Poppins', sans-serif;
 }
 
 .vertical-align {
@@ -168,13 +171,13 @@
 .navbar-doublerow .navbar-top ul>li>a {
    padding: 10px auto;
    font-size: 16px;
-   color: #EDF5FC;
+   color: #346734;
 }
 
 .navbar-doublerow .navbar-top ul>li>a:visited {
    padding: 10px auto;
    font-size: 15px;
-   color: #EDF5FC;
+   color: #346734;
 }
 
 /*down nav*/
@@ -189,30 +192,30 @@
 
 .navbar-doublerow .navbar-down ul>li>a {
    font-size: 20px;
-   color: #EDF5FC;
+   color: #346734;
    transition: border-bottom .2s ease-in, text-shadow .2s ease-in;
 }
 
 .navbar-doublerow .navbar-down ul>li>a:visited {
    font-size: 20px;
-   color: #EDF5FC;
+   color: #346734;
    transition: border-bottom .2s ease-in, text-shadow .2s ease-in;
 }
 
 .navbar-doublerow .navbar-down ul>li>a:hover {
    text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-   border-bottom: 1px solid #EDF5FC;
-   color: #EDF5FC;
+   border-bottom: 1px solid #346734;
+   color: #346734;
 }
 
 .navbar-doublerow .navbar-down .dropdown {
    padding: 5px;
-   color: #EDF5FC;
+   color: #346734;
 }
 
 .navbar-doublerow .navbar-down .dropdown ul>li>a,
 .navbar-doublerow .navbar-down .dropdown ul>li>a:hover {
-   color: #EDF5FC;
+   color: #346734;
    border-bottom: none;
 }
 
@@ -320,14 +323,14 @@
 /*text*/
 .text-white,
 .text-white-hover:hover {
-   color: #EDF5FC !important;
+   color: #346734 !important;
 }
 
 /*fontcolor*/
 
 .light-grey {
-   color: #EDF5FC !important;
-   background-color: #E6E9ED !important
+   color: #346734 !important;
+   background-color: #346734 !important
 }
 
 .name-field {
@@ -378,6 +381,7 @@ textarea {
 .contact-field {
    width: 100%;
    margin: 0 2%;
+   font-family: 'Roboto Slab', serif !important;
 }
 
 .contact-email-field,
@@ -425,6 +429,7 @@ textarea {
       transition: opacity .2s ease-in, box-shadow .2s ease-in;
       box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       opacity: 1;
+      border-radius: 5px;
    }
    .dropdown {
       display: none;
@@ -456,6 +461,7 @@ textarea {
       transition: opacity .2s ease-in, box-shadow .2s ease-in;
       box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       opacity: 1;
+      border-radius: 5px;
    }
    .dropdown {
       display: inherit;
