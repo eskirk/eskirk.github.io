@@ -9,13 +9,17 @@
 }
 
 #background {
-   background-image: url("./assets/PLANTS.jpg");
+   /* background-image: url("./assets/PLANTS.jpg");
    background-attachment: fixed;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   height: 1500px;
-   font-family: Moon;
+   height: 1500px; */
+   background: #c9de96; /* Old browsers */
+   background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   font-family: 'Roboto Slab', serif;
 }
 
 .centered-row {
@@ -26,10 +30,12 @@
 .main {
    padding-top: 15%;
    text-align: center;
+   font-family: 'Roboto Slab', serif;
 }
 
 .welcome {
    margin: 5px 30px;
+   font-family: 'Poppins', sans-serif;
 }
 
 .vertical-align {
@@ -40,6 +46,7 @@
 .big {
    font-size: 38px;
    font-weight: bold;
+   font-family: 'Poppins', sans-serif;
 }
 
 .render img {
@@ -88,6 +95,10 @@
    border-radius: 15px;
 }
 
+.learn-more {
+   font-family: 'Roboto Slab', serif !important;
+}
+
 .zoom {
    animation-name: zoom;
    animation-duration: 0.5s;
@@ -124,6 +135,7 @@
 
 .navbar {
    z-index: 10 !important;
+   font-family: 'Poppins', sans-serif !important;
 }
 
 .navbar-trans {
